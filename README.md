@@ -28,23 +28,25 @@ To run everything locally, run DynamoDB-Local in port 8010 (or set the port like
 
 ====================================================================================================
 
+**Eclipse**
+
 If you are using eclipse, check the launcher menu for HootApp (created based on file HootApp.launch)
 
 ====================================================================================================
 
-If you are not using eclipse:
+**Other IDEs**
 
-HootApp {opts} [listen-port] [dynamoDB-local-port]
+java {opts} HootApp [listen-port] [dynamoDB-local-port]
 
---> defaults to 'HootApp {opts} 80 8010'
+--> defaults to 'HootApp 80 8010'
 
 opts:
 -Xmx500M
 -Dfile.encoding=UTF-8
--Daws.accessKeyId=AAAAAAAAAAAA&
+-Daws.accessKeyId=AAAAAAAAAAAA
 -Daws.secretKey=SEEEEEEECCRRRRREEEETTT"
 
-Note that (weirdly) to run DynamoDB locally you should supply some aws keys. But any will work.
+Note that (weirdly) to connect to DynamoDB-Local you should supply some aws keys. But any will work.
 
 ====================================================================================================
 
@@ -69,5 +71,7 @@ Each endpoint registers itself as a destination, listening on a port starting fr
 **WebhookSender**
 
 You can then run WebhookSender, which sends random messages to all destinations. 
+
+
 
 Thank you for your time.
