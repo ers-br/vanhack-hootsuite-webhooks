@@ -26,9 +26,9 @@ If you are using eclipse, check the launcher menu for HootApp (created based on 
 
 If you are not using eclipse:
 
-HootApp <opts> [listen-port] [dynamoDB-local-port]
+HootApp {opts} [listen-port] [dynamoDB-local-port]
 
---> defaults to 'HootApp <opts> 80 8010'
+--> defaults to 'HootApp {opts} 80 8010'
 
 opts:
 -Xmx500M
@@ -36,10 +36,13 @@ opts:
 -Daws.accessKeyId=AAAAAAAAAAAA&
 -Daws.secretKey=SEEEEEEECCRRRRREEEETTT"
 
+Note that (weirdly) to run DynamoDB locally you should supply 'some' keys.
 ====================================================================================================
 
 To run everything locally, run DynamoDB-Local in port 8010 (or set the port)
   --> http://docs.aws.amazon.com/amazondynamodb/latest/developerguide/DynamoDBLocal.html
+  
+  (I will embed it into this project but I should not change code right now, due to hackathon)
 
 ====================================================================================================
 
